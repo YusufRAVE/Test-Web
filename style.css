@@ -1,0 +1,337 @@
+.Screen {
+    height: 200vh;
+    overflow:auto;
+
+}
+
+.Screen-Background {
+    background-image: url("static/photos/mybackground.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode:difference;
+    background-origin: content-box;
+}
+
+.Head-Fonts {
+    margin: 0.7%;
+    padding: 0%;
+    line-height: normal;
+    color: #ffffffff;
+    pointer-events: none;
+    font-size: 90px;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: normal;
+    text-align: center;
+    text-shadow: 0 0 2px  #fff;
+    font-weight: bold;
+}
+
+.Center-Div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+.FLOATob1 {
+    pointer-events: fill;
+    font-size: 15px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: normal;
+    color: rgb(227, 224, 224);
+    border: 2px solid color(srgb 0.5 0.1 1);
+    text-align: center;
+    display: block;
+    padding: 5px;
+    border-radius: 10px;
+    width: 130px;
+    height: 180px;
+    box-shadow: 0 0 5px 2px rgb(64, 64, 89);
+}
+
+.FLOATob2 {
+    font-size: 15px ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: normal;
+    color: white;
+    border: 3px solid rgb(179, 152, 116);
+    border-radius: 15px;
+    width: 450px;
+    height: 170px;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    box-shadow: inset 1px 1px 2px 1px rgb(179, 152, 116);
+}
+
+.Float-Input {
+    background:none;
+    border: 2px solid whitesmoke;
+    border-radius: 15px;
+    width: 500px;
+    height: 45px;
+    padding: 8px;
+    margin: 1px;
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+.Float-Button {
+    background:none;
+    font-size: 30px;
+    text-align: center;
+    margin: 1px;
+    padding: 5px;
+    border-radius: 5px;
+    top: 0.1em;
+    border: thin black;
+    color: whitesmoke;
+    pointer-events: none;
+}
+
+.Tape-Button {
+    overflow: hidden;
+    cursor: pointer;
+    background:none;
+    font-size: 13px;
+    color: rgb(255, 234, 198);
+    margin: 18px;
+    text-align:center;
+    border: thin black;
+}
+.cover {
+    transition: trasform 0.1 linear;
+}
+.cover:hover {
+    transform: scale(1.05);
+}
+
+.Hidden-Tape {
+    opacity: 0;
+    font-size: 13px;
+    transform: opacity 0.1s ease, transform 0.1s ease;
+    transform: translateY(-30px);
+    visibility: hidden;
+    color: burlywood;
+    pointer-events:none;
+}
+
+.Open-Tape {
+    opacity: 1;;
+    visibility: visible;
+    transform: opacity 0.1s ease, transform 0.1s ease;
+    transform: translateY(30px);
+    font-size: 13px;
+    color: burlywood;
+    pointer-events: none;
+    
+}
+
+.Hidden-Profile {
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: opacity 1s ease, transform 0.3s ease;
+    transform: translate(-235px,0);
+}
+
+.Open-Profile {
+    opacity: 1;
+    overflow: visible;
+    pointer-events:none;
+    transition: opacity 1s ease, transform 0.5s ease;
+    transform: translate(235px,0);
+}
+
+.Profile {
+    background-color: rgba(22, 19, 19, 0.8);
+    background-blend-mode:lighten;
+    border: 1px solid rgba(19, 19, 19, 0.1);
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.Profile-Word {
+    color: rgb(105, 91, 73);
+    font-size: 30px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.Profile-Image {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 21px;
+    background-color: rgba(20, 15, 15, 3);
+    box-shadow: inset 0 0 0 2px rgb(35, 35, 35);
+}
+
+.Table-Profile {
+    margin: 8px;
+    padding: 8px;
+    background-color: rgba(20, 20, 15, 0.1);
+    background-blend-mode: lighten;
+    border: 2px solid rgb(20, 18,30 ,0.3);
+    border-radius: 15px;
+    box-shadow: inset 0 0 0 3px rgb(11, 7, 0);
+    color: rgb(162, 153, 140);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.Hidden-Info {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+    transition: opacity 0.5s ease, transform 0.1s ease;
+    transform: translate(-300px,0);
+}
+
+.Open-Info {
+    opacity: 1;
+    position: absolute;
+    pointer-events:all;
+    transition: opacity 1s ease, transform 1.5s ease;
+    transform: translate(139px,0);
+}
+
+.Button-Info {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    border: 2px solid rgba(50, 50, 50, 0.3);
+    border-radius: 7px;
+    background-blend-mode: lighten;
+    width: 200px;
+    text-align: start;
+    color: aliceblue;
+    background: none;
+    padding: 8px;
+    margin: 5px;
+    box-shadow: inset 0.5px 0.5px 5px 0.1px rgb(163, 163, 163);
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.P {
+    border: 2px solid rgba(111, 111, 111, 0.5);
+    border-radius: 20px;
+    box-shadow: inset 100px 100px 200px 200px rgb(255, 4, 4);
+    box-shadow: inset 100px 100px 40px 9px rgb(0, 0, 50);
+    box-shadow: inset 80px 66px 10px 5px rgb(24, 24, 10);
+    box-shadow: 55px 55px 55px 55px rgb(15, 37, 50);
+    box-shadow: inset 80px 100px 100px 150px rgb(22, 20, 20);
+    background-blend-mode: lighten;
+    background-color: rgb(1, 10, 10);
+    width: 850px;
+    height: 450px;
+    padding: 10px;
+    margin: 5px;
+    color: rgb(230, 230, 230) ;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    letter-spacing: 5px;
+    font-size: 17px;
+    font-weight: bold;
+    text-shadow: 0 0 1px #ffffffff;
+    color: #ffffffff;
+}
+
+.Positon-Info {
+    top: 7.5%;
+    left: 4%;
+}
+
+.Disappear {
+    display: none;
+    pointer-events: none;
+
+}
+
+.Appear {
+    opacity: 1;
+}
+
+
+a {
+    pointer-events: auto;
+}
+
+
+.hr-1 {
+    background-color: rgb(109, 42, 241);
+    border: none;
+    height: 1px;
+    margin: 6px, 1px;
+}
+.hr-2 {
+    background-color: rgb(179, 152, 116);
+    border: none;
+    height: 1px;
+    margin: 6px, 1px;
+}
+
+audio {
+    width: 120px;
+    height: 20px;
+    border: 1px solid rgb(77, 77, 77);
+    border-radius:10px;
+    background-color: gray;
+    box-shadow: inset 0 0 0 20px gray;
+}
+
+th {
+    text-align: start;
+}
+
+.links{
+    border: thin black; color: rgb(101, 101, 101); 
+    color: rgb(170, 170, 170);
+    display: flex;
+    float:left;
+    padding: 5px;
+    margin-top: 5px;
+
+
+
+}
+
+.span1 {
+    float: right;
+    color: white;
+
+}
+.span2{
+    color: white;
+    margin-left: 35px;
+    padding-top: 0px;
+    margin-top: 0px;
+    font-size: 43px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+.Videos {
+    width: 800px;
+    height: 400px;
+    border-radius: 20px;
+    background: none;
+    object-fit: cover;
+}
+
+.Profile-Video{
+    width: 100px;
+    height: 110px;
+    position:absolute;
+    top: 20%; left: 70%;
+    object-fit: cover;
+    border-radius: 20px;
+    pointer-events: none;
+}
+
+
+
